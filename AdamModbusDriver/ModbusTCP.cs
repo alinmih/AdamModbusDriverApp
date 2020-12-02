@@ -638,7 +638,6 @@ namespace AdamModbusDriver
                         Array.Copy(_tcpSyncronousBufferArray, 9, reveivedData, 0, _tcpSyncronousBufferArray[8]);
                     }
                     return reveivedData;
-
                 }
                 catch (SystemException)
                 {
@@ -651,7 +650,5 @@ namespace AdamModbusDriver
             }
             return null;
         }
-
-
     }
 }

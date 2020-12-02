@@ -14,6 +14,10 @@ namespace AdamModbusDriverClient
         {
             ModbusTCP modbus = new ModbusTCP("192.168.0.115", 502);
 
+            modbus.OnException += Modbus_OnException;
+            modbus.OnResponseData += Modbus_OnResponseData;
+
+            modbus.ReadCoilsAsync(1, 1, 0, 2);
             var conn = modbus.Connected;
 
             ushort start = 16;
@@ -65,10 +69,28 @@ namespace AdamModbusDriverClient
             //    Console.WriteLine(item);
             //}
 
+            modbus.OnException -= Modbus_OnException;
+            modbus.OnResponseData -= Modbus_OnResponseData;
             modbus.Disconnect();
 
             Console.ReadLine();
 
+        }
+
+        private static void Modbus_OnResponseData(ushort id, byte unit, byte function, byte[] data)
+        {
+            BitArray bitArray = new BitArray(data);
+            int[] numbers = new int[bitArray.Count];
+            for (int i = 0; i < bitArray.Length; i++)
+            {
+                numbers[i] = bitArray[i] ? 1 : 0;
+                Console.WriteLine($"Coil {i} : {numbers[i]}");
+            }
+        }
+
+        private static void Modbus_OnException(ushort id, byte unit, byte function, byte exception)
+        {
+            
         }
     }
 }
