@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdamModbusDriver", "AdamModbusDriver\AdamModbusDriver.csproj", "{6EA3ACAE-5E85-4BD3-9053-B6CF0F1F4871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdamModbusDriverClient", "AdamModbusDriverClient\AdamModbusDriverClient.csproj", "{9BE5B250-AE35-4343-9A41-DF49EB355EFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EA3ACAE-5E85-4BD3-9053-B6CF0F1F4871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA3ACAE-5E85-4BD3-9053-B6CF0F1F4871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA3ACAE-5E85-4BD3-9053-B6CF0F1F4871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA3ACAE-5E85-4BD3-9053-B6CF0F1F4871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE5B250-AE35-4343-9A41-DF49EB355EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE5B250-AE35-4343-9A41-DF49EB355EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE5B250-AE35-4343-9A41-DF49EB355EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE5B250-AE35-4343-9A41-DF49EB355EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9541FAF9-E212-4AEB-872E-61DDFB0790E8}
+	EndGlobalSection
+EndGlobal
